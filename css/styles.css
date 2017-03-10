@@ -1,11 +1,11 @@
 .navbar-brand {
   font-family: 'Fjalla One', sans-serif;
   color: #D62703;
+  font-size: 2.5em;
 }
 
 #link1 {
   background-color: #003463;
-  color: white;
 }
 
 #link2 {
@@ -15,6 +15,10 @@
 
 #link3 {
   background-color: #F29D00;
+  color: white;
+}
+
+.navbar li a {
   color: white;
 }
 
@@ -30,9 +34,6 @@ footer {
   height:300px;
 }
 
-a {
-  color: #D62703;
-}
 
 h1 {
   font-size: 3.5em;
@@ -106,14 +107,68 @@ h5 {
   background: #000000;
 }
 
-.jumbotron-fluid {
-  padding: 0px;
+.hill {
+  background-image: url(http://ackland.org/files/2017/01/RL_14_136.jpg);
+  padding: 80px;
+}
+
+
+/* table */
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+	background-color: #FFF9E9;
 }
 
 th {
   color: #F29D00;
 }
 
+table a {
+  color: 003463;
+}
+
 .center {
   text-align: center;
+}
+
+.light {
+  font-weight: 300;
+}
+/* buttons */
+
+.smallb {
+  color: white;
+  background-color: #F29D00;
+  border: none;
+  margin: 5px;
+}
+
+.mediumb {
+  color: white;
+  background-color: #003463;
+  border: none;
+  padding: 10px;
+  margin: 5px;
+}
+
+.largeb {
+  color: white;
+  background-color: #009BE3;
+  border: none;
+  padding: 20px;
+  margin: 5px;
+}
+
+.outline1 {
+  border-color: #009BE3;
+  background-color: white;
+  padding: 20px;
+  margin: 5px;
+}
+
+.outline2 {
+  border-color: #003463;
+  background-color: white;
+  padding: 20px;
+  margin: 5px;
 }
