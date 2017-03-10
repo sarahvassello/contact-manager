@@ -2,7 +2,7 @@
 
     include 'header.php';
     include 'database.php';
-    
+
     $contacts = $db->query('SELECT * FROM contacts')->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
@@ -13,7 +13,16 @@
     <title>Contact Manager</title>
   </head>
   <body>
-    <h1>Contact List <span class="text-muted">(<?= count($contacts); ?>)</span></h1>
+    <div class="hill">
+  </div>
+  <div class="row col-md-6 col-md-offset-3">
+    <h1>Hip-hop in the Hill</h1>
+    <p>
+      In an effort to get more students involved in the Ackland Art Museum, we are starting
+      a new initiative: Hip-hop in the Hill, a series of hip-hop concerts held in concert with
+      our permanent collection. To plan for the 2019-2020 budget, here are a few potential artists.
+    </p>
+    <h1>Potential artists <span class="text-muted">(<?= count($contacts); ?>)</span></h1>
     <table class="table table-hover table-striped table-responsive">
     <thead>
     <th>ID</th>
@@ -25,22 +34,17 @@
   <tbody>
    <?php foreach($contacts as $contact) : ?>
    <tr>
-     <td><a href="/edit.php?id=<?= $contacts['ID']; ?>"><?= $contact['ID']; ?></a></td>
-      <td><a href="/edit.php?id=<?= $contacts['First Name']; ?>"><?= $contact['First Name']; ?></a></td>
-      <td><a href="/edit.php?id=<?= $contacts['Last Name']; ?>"><?= $contact['Last Name']; ?></a></td>
-      <td><a href="/edit.php?id=<?= $contacts['City']; ?>"><?= $contact['City']; ?></a></td>
-      <td><a href="/edit.php?id=<?= $contacts['State']; ?>"><?= $contact['State']; ?></a></td>
-
-
-
+     <td><a href="/edit.php?id=<?= $contacts['id']; ?>"><?= $contact['id']; ?></a></td>
+      <td><a href="/edit.php?id=<?= $contacts['first']; ?>"><?= $contact['first']; ?></a></td>
+      <td><a href="/edit.php?id=<?= $contacts['last']; ?>"><?= $contact['last']; ?></a></td>
+      <td><a href="/edit.php?id=<?= $contacts['city']; ?>"><?= $contact['city']; ?></a></td>
+      <td><a href="/edit.php?id=<?= $contacts['state']; ?>"><?= $contact['state']; ?></a></td>
    </tr>
      <?php endforeach; ?>
    </tbody>
 </table>
-<button type="button" class="btn btn-primary">Add New Contact</button>
+</div>
 
-
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  </body>
-</html>
+<?php
+include 'footer.php';
+?>
